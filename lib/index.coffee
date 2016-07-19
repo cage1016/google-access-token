@@ -19,7 +19,7 @@ module.exports = (config) ->
 
   console.log()
 
-  server = app.listen config.port, ->
+  server = app.listen config.port, '127.0.0.1', ->
     addr = server.address()
     console.log "! ".bold.green + "Visit ".bold.white + "#{address(addr.address, addr.port)}".white
     console.log "! ".bold.green + "Be sure to set your Google app's callback URL to " + address(addr.address, addr.port, 'callback').green
